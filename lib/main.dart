@@ -1,11 +1,14 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rentacles/modules/home/home.binding.dart';
-import 'package:rentacles/modules/home/home.page.dart';
 import 'package:rentacles/routes/app.pages.dart';
 import 'package:rentacles/themes/colors.theme.dart';
+import 'package:rentacles/widget_tree.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -20,7 +23,7 @@ class MyApp extends StatelessWidget {
       title: 'Open Source',
       theme: ThemeColor().themeData,
       initialBinding: HomeBinding(),
-      home: const HomePage(),
+      home: const WidgetTree(),
       getPages: AppPages.pages,
     );
   }

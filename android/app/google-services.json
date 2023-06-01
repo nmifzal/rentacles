@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "873559048706",
+    "project_id": "rentacles-da066",
+    "storage_bucket": "rentacles-da066.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:873559048706:android:b04e8c0ceb9f36ee309d1b",
+        "android_client_info": {
+          "package_name": "com.nmifzal.rentacles"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVHk_7LKPgDahDPlL-Lih62AuWTgu0gyw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
