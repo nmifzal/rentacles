@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rentacles/modules/home/home.binding.dart';
 import 'package:rentacles/routes/app.pages.dart';
-import 'package:rentacles/themes/colors.theme.dart';
+import 'package:rentacles/themes/theme.dart';
 import 'package:rentacles/widget_tree.dart';
 
 Future<void> main() async {
@@ -21,7 +21,9 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Open Source',
-      theme: ThemeColor().themeData,
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: ThemeMode.light,
       initialBinding: HomeBinding(),
       home: const WidgetTree(),
       getPages: AppPages.pages,

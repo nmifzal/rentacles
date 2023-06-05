@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rentacles/auth.dart';
-import 'package:rentacles/themes/colors.theme.dart';
+import 'package:rentacles/themes/theme.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -37,8 +37,7 @@ class _HomePageState extends State<HomePage> {
                   width: 200.0,
                   height: 200.0,
                   decoration: BoxDecoration(
-                    color:
-                        ThemeColor().themeData.primaryColor.withOpacity(0.25),
+                    // color: AppTheme().themeData.primaryColor.withOpacity(0.25),
                     shape: BoxShape.circle,
                   ),
                 ),
@@ -51,8 +50,8 @@ class _HomePageState extends State<HomePage> {
                   height: 280.0,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(colors: [
-                      ThemeColor().themeData.primaryColor,
-                      ThemeColor().themeData.primaryColor.withOpacity(0.125),
+                      // AppTheme().themeData.primaryColor,
+                      // AppTheme().themeData.primaryColor.withOpacity(0.125),
                     ]),
                     shape: BoxShape.circle,
                   ),
@@ -86,8 +85,8 @@ class _HomePageState extends State<HomePage> {
                 child: FloatingActionButton(
                   onPressed: () => counter.value--,
                   tooltip: 'Decrement',
-                  backgroundColor:
-                      ThemeColor().themeData.primaryColor.withOpacity(0.8),
+                  // backgroundColor:
+                  //     AppTheme().themeData.primaryColor.withOpacity(0.8),
                   child: const Icon(Icons.remove),
                 ),
               ),

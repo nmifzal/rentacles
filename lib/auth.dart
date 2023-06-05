@@ -22,15 +22,15 @@ class Auth {
 
   Future loginWithPhoneNumber({required String phoneNumber}) async {
     await _firebaseAuth.verifyPhoneNumber(
-      phoneNumber: phoneNumber,
+      phoneNumber: '+91$phoneNumber',
       verificationCompleted: (PhoneAuthCredential credential) async {
         await _firebaseAuth.signInWithCredential(credential);
       },
       codeSent: (String verificationId, int? resendToken) async {
-        this.varificationId.value = verificationId;
+        varificationId.value = verificationId;
       },
       codeAutoRetrievalTimeout: (String verificationId) {
-        this.varificationId.value = verificationId;
+        varificationId.value = verificationId;
       },
       verificationFailed: (FirebaseAuthException e) {
         if (e.code == 'invalid-phone-number') {
