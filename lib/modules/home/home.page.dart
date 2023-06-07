@@ -1,8 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:rentacles/auth.dart';
-import 'package:rentacles/themes/theme.dart';
+import 'package:rentacles/modules/auth/auth.controller.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -12,10 +11,10 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   RxInt counter = 0.obs;
-  final User? user = Auth().currentUser;
+  final User? user = AuthController().currentUser;
 
   Future<void> signOut() async {
-    await Auth().signOut();
+    await AuthController().signOut();
   }
 
   @override
@@ -49,10 +48,6 @@ class _HomePageState extends State<HomePage> {
                   width: 280.0,
                   height: 280.0,
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(colors: [
-                      // AppTheme().themeData.primaryColor,
-                      // AppTheme().themeData.primaryColor.withOpacity(0.125),
-                    ]),
                     shape: BoxShape.circle,
                   ),
                 ),
@@ -83,6 +78,7 @@ class _HomePageState extends State<HomePage> {
                 height: 40,
                 width: 40,
                 child: FloatingActionButton(
+                  heroTag: "btn1",
                   onPressed: () => counter.value--,
                   tooltip: 'Decrement',
                   // backgroundColor:

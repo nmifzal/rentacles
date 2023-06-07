@@ -1,6 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:rentacles/modules/splash/splash.binding.dart';
+import 'package:rentacles/modules/splash/splash.screen.dart';
 import 'package:rentacles/modules/home/home.binding.dart';
 import 'package:rentacles/routes/app.pages.dart';
 import 'package:rentacles/themes/theme.dart';
@@ -24,8 +26,8 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.light,
-      initialBinding: HomeBinding(),
-      home: const WidgetTree(),
+      initialBinding: SplashBinding(),
+      home: SplashScreen(),
       getPages: AppPages.pages,
     );
   }

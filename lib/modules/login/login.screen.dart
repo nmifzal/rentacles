@@ -1,15 +1,15 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:rentacles/auth.dart';
+import 'package:rentacles/modules/auth/auth.controller.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _LoginScreenState extends State<LoginScreen> {
   String? errorMessage = '';
   bool isLogin = true;
 
@@ -20,7 +20,7 @@ class _LoginPageState extends State<LoginPage> {
 // methods
   Future<void> signInWithEmailAndPassword() async {
     try {
-      await Auth().signInWithEmailAndPassword(
+      await AuthController().signInWithEmailAndPassword(
           email: _controllerEmail.text, password: _controllerPassword.text);
     } on FirebaseAuthException catch (e) {
       setState(() {
@@ -31,7 +31,7 @@ class _LoginPageState extends State<LoginPage> {
 
   Future<void> signInWithPhoneNumber() async {
     try {
-      await Auth()
+      await AuthController()
           .loginWithPhoneNumber(phoneNumber: _controllerPhoneNumber.text);
     } on FirebaseAuthException catch (e) {
       setState(() {
@@ -42,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
 
   Future<void> createUserWithEmailAndPassword() async {
     try {
-      await Auth().createUserWithEmailAndPassword(
+      await AuthController().createUserWithEmailAndPassword(
           email: _controllerEmail.text, password: _controllerPassword.text);
     } on FirebaseAuthException catch (e) {
       setState(() {

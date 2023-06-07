@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:rentacles/auth.dart';
+import 'package:rentacles/modules/auth/auth.controller.dart';
 import 'package:rentacles/modules/home/home.page.dart';
-import 'package:rentacles/modules/login/login.page.dart';
+import 'package:rentacles/modules/login/login.screen.dart';
 
 class WidgetTree extends StatefulWidget {
   const WidgetTree({super.key});
@@ -14,12 +14,12 @@ class _WidgetTreeState extends State<WidgetTree> {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder(
-      stream: Auth().authStageChanges,
+      stream: AuthController().authStageChanges,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           return const HomePage();
         }
-        return const LoginPage();
+        return const LoginScreen();
       },
     );
   }
