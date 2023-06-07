@@ -12,7 +12,20 @@
           "package_name": "com.nmifzal.rentacles"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "873559048706-8dfoc00tnjbcndegpbbupaknpu74mvr9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nmifzal.rentacles",
+            "certificate_hash": "e57ff4bb36fef16df55ee2a4ad4d1b3dcde92dac"
+          }
+        },
+        {
+          "client_id": "873559048706-18136a41fq51lip7i2mbu09qjlaj1vvc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCVHk_7LKPgDahDPlL-Lih62AuWTgu0gyw"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "873559048706-18136a41fq51lip7i2mbu09qjlaj1vvc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

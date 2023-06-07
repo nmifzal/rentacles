@@ -3,14 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rentacles/modules/splash/splash.binding.dart';
 import 'package:rentacles/modules/splash/splash.screen.dart';
-import 'package:rentacles/modules/home/home.binding.dart';
 import 'package:rentacles/routes/app.pages.dart';
 import 'package:rentacles/themes/theme.dart';
-import 'package:rentacles/widget_tree.dart';
+import 'firebase_options.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 

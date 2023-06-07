@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>873559048706-8n66805q8spqqk6ah8f5u6geu1nfha3u.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.873559048706-8n66805q8spqqk6ah8f5u6geu1nfha3u</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>873559048706-8dfoc00tnjbcndegpbbupaknpu74mvr9.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBdBpNVHKt-E-dLqWl3yG2pqRfu3vlAmb4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>873559048706</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.nmifzal.rentacles</string>
+	<key>PROJECT_ID</key>
+	<string>rentacles-da066</string>
+	<key>STORAGE_BUCKET</key>
+	<string>rentacles-da066.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:873559048706:ios:0bcbb82c48c9c38b309d1b</string>
+</dict>
+</plist>
